@@ -14,6 +14,7 @@ Task Buddy is a full-stack task management application built with modern tools l
 ### Authentication
 - Secure user authentication with **Supabase Auth**.
 - Email/password and social login (Google, GitHub, etc.).
+- **Google OAuth Consent Screen** setup for seamless Google authentication.
 
 ### Built with Modern Tools
 - **Next.js** for server-side rendering and API routes.
@@ -39,13 +40,46 @@ Check out the live demo of Task Buddy: [Task Buddy Demo](https://task-buddy-demo
 - Create a new project in the [Supabase Dashboard](https://supabase.com/dashboard).
 - Enable authentication providers (Google, GitHub, etc.).
 
-### 2. Clone the Repository
+### 2. Set Up Google OAuth Consent Screen
+To enable Google authentication, you need to configure the **Google OAuth Consent Screen**:
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project or select an existing one.
+3. Navigate to **APIs & Services > OAuth Consent Screen**.
+4. Set the **User Type** to **External** and click **Create**.
+5. Fill in the required fields:
+   - **App name**: Task Buddy
+   - **User support email**: Your email address
+   - **Developer contact information**: Your email address
+6. Add the **Authorized domains**:
+   - `localhost`
+   - Your deployment domain (e.g., `task-buddy-demo.vercel.app`)
+7. Add **Scopes**:
+   - `email`
+   - `profile`
+   - `openid`
+8. Save and submit for verification (if required).
+
+### 3. Configure Google OAuth Credentials
+1. Navigate to **APIs & Services > Credentials**.
+2. Click **Create Credentials** and select **OAuth 2.0 Client ID**.
+3. Set the **Application type** to **Web application**.
+4. Add the following **Authorized redirect URIs**:
+   - `http://localhost:3000/api/auth/callback`
+   - `https://task-buddy-demo.vercel.app/api/auth/callback`
+5. Copy the **Client ID** and **Client Secret**.
+
+### 4. Add Google OAuth Credentials to Supabase
+1. Go to your Supabase project's **Authentication > Providers**.
+2. Enable **Google** and paste the **Client ID** and **Client Secret**.
+3. Save the changes.
+
+### 5. Clone the Repository
 ```bash
 git clone https://github.com/your-repo/task-buddy.git
 cd task-buddy
 ```
 
-### 3. Set Up Environment Variables
+### 6. Set Up Environment Variables
 - Rename `.env.example` to `.env.local`.
 - Update the following variables with your Supabase project credentials:
   ```env
@@ -54,18 +88,18 @@ cd task-buddy
   ```
   You can find these credentials in your Supabase project's **API settings**.
 
-### 4. Install Dependencies
+### 7. Install Dependencies
 ```bash
 npm install
 ```
 
-### 5. Run the Development Server
+### 8. Run the Development Server
 ```bash
 npm run dev
 ```
 The app will be running at `http://localhost:3000`.
 
-### 6. Customize the UI
+### 9. Customize the UI
 This template comes with **shadcn/ui** pre-configured. You can customize the components by editing the `components.json` file or re-installing shadcn/ui.
 
 ---

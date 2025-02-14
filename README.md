@@ -1,3 +1,7 @@
+Here’s the updated **README** file with instructions for adding **screenshots** of the project. Screenshots help users visualize the app before they try it out.
+
+---
+
 # Task Buddy
 
 Task Buddy is a full-stack task management application built with modern tools like **Next.js**, **Supabase**, and **Tailwind CSS**. It allows users to create, update, and delete tasks, organize them by status, and filter by category, due date, or search. The app also includes secure user authentication with **Supabase Auth** and supports email/password and social logins (Google, GitHub, etc.).
@@ -29,6 +33,21 @@ Task Buddy is a full-stack task management application built with modern tools l
 
 - Works across the entire Next.js stack (App Router, Pages Router, Middleware, Client, Server).
 - **Supabase Auth** with cookie-based sessions for seamless user experiences.
+
+---
+
+## Screenshots
+
+### 1. Task Dashboard
+
+ <img alt="Task Byddy List View" src="/public/task1.PNG">
+
+_The main dashboard where users can view, filter, and manage their tasks._
+
+### 2. Task Details
+
+ <img alt="Task Byddy List View" src="/public/task2.PNG">
+_Detailed view of a task, including its description, due date, and status._
 
 ---
 
@@ -335,3 +354,5 @@ If you encounter any issues or have feedback, please open an issue on [GitHub](h
 ## Deploy Link
 
 You can access the deployed version of Task Buddy here: [Task Buddy Demo](https://task-buddy-demo.vercel.app)
+
+---

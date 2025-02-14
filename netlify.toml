@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "http://localhost:3000/*"
+  to = "http://localhost:3000/:splat"
+  status = 200
+
+[[redirects]]
+  from = "https://**--task-buddyy.netlify.app/*"
+  to = "https://**--task-buddyy.netlify.app/:splat"
+  status = 200

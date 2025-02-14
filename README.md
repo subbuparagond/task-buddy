@@ -49,7 +49,7 @@ _Detailed view of a task, including its description, due date, and status._
 
 ## Demo
 
-Check out the live demo of Task Buddy: [Task Buddy Demo](https://task-buddy-demo.vercel.app)
+Check out the live demo of Task Buddy: [Task Buddy Demo](https://task-buddyy.netlify.app)
 
 ---
 
@@ -349,6 +349,6 @@ If you encounter any issues or have feedback, please open an issue on [GitHub](h
 
 ## Deploy Link
 
-You can access the deployed version of Task Buddy here: [Task Buddy Demo](https://task-buddy-demo.vercel.app)
+You can access the deployed version of Task Buddy here: [Task Buddy Demo](https://task-buddyy.netlify.app)
 
 ---

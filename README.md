@@ -1,7 +1,3 @@
-Here’s the updated **README** file with instructions for adding **screenshots** of the project. Screenshots help users visualize the app before they try it out.
-
----
-
 # Task Buddy
 
 Task Buddy is a full-stack task management application built with modern tools like **Next.js**, **Supabase**, and **Tailwind CSS**. It allows users to create, update, and delete tasks, organize them by status, and filter by category, due date, or search. The app also includes secure user authentication with **Supabase Auth** and supports email/password and social logins (Google, GitHub, etc.).

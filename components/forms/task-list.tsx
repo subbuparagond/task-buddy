@@ -86,6 +86,16 @@ export default function Tasks({ user }: { user: any }) {
       sortField,
       sortDirection
     );
+  }, []);
+
+  useEffect(() => {
+    fetchTasks(
+      searchQuery,
+      selectedCategory,
+      selectedDueDate,
+      sortField,
+      sortDirection
+    );
   }, [
     searchQuery,
     selectedCategory,

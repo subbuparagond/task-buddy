@@ -88,7 +88,7 @@ export default function Tasks({ user }: { user: any }) {
     );
   }, []);
 
-   useEffect(() => {
+  useEffect(() => {
     if (user?.id) {
       fetchTasks(
         searchQuery,
@@ -106,7 +106,6 @@ export default function Tasks({ user }: { user: any }) {
     sortField,
     sortDirection,
   ]);
-
   const handleSort = (field: "title" | "due_date" | "status" | "category") => {
     if (sortField === field) {
       setSortDirection((prev) => (prev === "asc" ? "desc" : "asc"));

@@ -52,6 +52,7 @@ export default function Tasks({ user }: { user: any }) {
   const [sortField, setSortField] = useState<
     "title" | "due_date" | "status" | "category"
   >("due_date");
+
   useEffect(() => {
     fetchTasks(
       searchQuery,
@@ -60,7 +61,19 @@ export default function Tasks({ user }: { user: any }) {
       sortField,
       sortDirection
     );
+  }, []);
+  useEffect(() => {
+    if (user?.id) {
+      fetchTasks(
+        searchQuery,
+        selectedCategory,
+        selectedDueDate,
+        sortField,
+        sortDirection
+      );
+    }
   }, [
+    user?.id,
     searchQuery,
     selectedCategory,
     selectedDueDate,

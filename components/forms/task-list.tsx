@@ -591,9 +591,9 @@ function StatusColumn({
   return (
     <div
       ref={setNodeRef}
-      className={`flex-1 bg-white rounded-lg shadow-sm ${
-        isOver ? "ring-4 ring-purple-500 transition-all duration-200" : ""
-      }`}
+      className={`flex-1 bg-white rounded-lg shadow-sm border-2 mt-10 ml-10 mr-10  border-transparent transition-all duration-200 
+        ${isOver ? "border-purple-500 ring-2 ring-purple-400" : "hover:border-gray-300"}
+        overflow-hidden`}
     >
       <div className={`p-4 rounded-t-lg ${bgColors[status]}`}>
         <div className="flex justify-between items-center">
